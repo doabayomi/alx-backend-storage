@@ -12,5 +12,5 @@ def schools_by_topic(mongo_collection, topic):
     Returns:
         List of schools teaching the topic
     """
-    result = mongo_collection.find({"topics": {"$elemMatch": topic}})
+    result = mongo_collection.find({"topics": topic})
     return list(result)
